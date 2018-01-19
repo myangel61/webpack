@@ -1,7 +1,6 @@
 # Webpack 3
 
-
-Step 1 : - "npm install"  
+Step 1 : - "npm install"
 
 step 2 : - "npm run dev" 
 
