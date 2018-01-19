@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractSCSS = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
+const HtmlCriticalPlugin = require('html-critical-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-source-map',
@@ -74,7 +74,7 @@ module.exports = {
         test: /\.(ttf|eot|otf|woff|svg)$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
               name: '[name].[ext]',
               outputPath: 'fonts/',
@@ -95,6 +95,19 @@ module.exports = {
     }),
     new ExtractSCSS({
       filename: 'css/[name].[hash].css',
+    }),
+    new HtmlCriticalPlugin({
+      base: path.join(path.resolve(__dirname), 'dist/'),
+      src: 'index.html',
+      dest: 'index.html',
+      inline: true,
+      minify: true,
+      extract: true,
+      width: 375,
+      height: 565,
+      penthouse: {
+        blockJSRequests: false,
+      }
     }),
     new CopyWebpackPlugin([{
       from: path.join(__dirname,'src','fonts'),
