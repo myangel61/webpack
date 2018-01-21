@@ -5,14 +5,15 @@
   "author": "Yaroslav",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server",
-    "prod": "npm run clean && webpack -p",
-    "abs": "npm run clean && webpack -p web.prod.js",
-    "clean": "rimraf dist",
+    "dev": "webpack-dev-server --open --config webpack.dev.js",
+    "staging": "rimraf staging && webpack -p --config webpack.staging.js",
+    "prod": "rimraf dist && webpack -p --config webpack.prod.js",
+    "clean": "rimraf dist standing",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint src/**/*.js",
     "lint:css": "stylelint ./src/**/*.scss",
-    "server": "http-server dist"
+    "server:staging": "http-server staging -o",
+    "server:prod": "http-server dist -o"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.3",
@@ -34,6 +35,7 @@
     "http-server": "^0.11.1",
     "jquery": "^3.1.1",
     "node-sass": "^4.7.2",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
     "postcss-loader": "^2.0.9",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
@@ -41,9 +43,11 @@
     "stylelint": "^7.5.0",
     "stylelint-config-standard": "^14.0.0",
     "stylelint-webpack-plugin": "^0.4.0",
+    "uglifyjs-webpack-plugin": "^1.1.6",
     "url-loader": "^0.6.2",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "^2.9.4",
+    "webpack-merge": "^4.1.1"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.24.1"
