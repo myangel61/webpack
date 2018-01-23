@@ -1,6 +1,5 @@
-// import '../js/components/owl-carousel/owl.carousel.min.css';
-// import '../js/components/owl-carousel/owl.carousel.css';
-import '../js/components/owl-carousel/dist/owl.carousel.min';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
 import '../scss/main.scss';
 
 $('#owl-one').owlCarousel({
