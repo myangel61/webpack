@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/myangel61/webpack.svg?branch=master)](https://travis-ci.org/myangel61/webpack)
+
 # Webpack 3
 
 Step 1 : - "npm install"
