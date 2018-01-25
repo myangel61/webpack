@@ -29,7 +29,7 @@ module.exports = merge(common, {
             loader: 'sass-loader',
             options: {
               outputPath: 'staging/',
-              outputStyle: 'nested'
+              outputStyle: 'nested',
             },
           }],
         }),
@@ -39,7 +39,7 @@ module.exports = merge(common, {
         use: [{
           loader: 'html-loader',
           options: {
-            minimize: false
+            minimize: false,
           },
         }],
       },

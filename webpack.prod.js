@@ -8,7 +8,7 @@ const HtmlCriticalPlugin = require('html-critical-webpack-plugin');
 
 module.exports = merge(common, {
   output: {
-    path: path.resolve(__dirname,'dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[hash].js',
     publicPath: '/',
   },
@@ -57,7 +57,7 @@ module.exports = merge(common, {
         evaluate: true,
         if_return: true,
         join_vars: true,
-        negate_iife: false
+        negate_iife: false,
       },
     }),
     new OptimizeCssAssetsPlugin(),

@@ -10,7 +10,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.js$/,
@@ -52,17 +52,17 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
-      "window.jQuery": "jquery"
+      "window.jQuery": "jquery",
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
     }),
     new ExtractSCSS({
       filename: 'css/[name].[hash].css',
     }),
     new CopyWebpackPlugin([
       {
-        from: path.join(__dirname,'src','img/favicon'),
+        from: path.join(__dirname, 'src', 'img/favicon'),
         to: 'img/favicon',
       },
     ]),
