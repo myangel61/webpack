@@ -5,7 +5,7 @@ dist: trusty
 language: node_js
 
 node_js:
-  - 6.8.0
+  - 8.9.1
 
 fast_finish: true
 
