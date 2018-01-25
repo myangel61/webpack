@@ -8,6 +8,7 @@
     "dev": "webpack-dev-server --open --config webpack.dev.js",
     "staging": "rimraf staging && webpack -p --config webpack.staging.js",
     "prod": "rimraf dist && webpack -p --config webpack.prod.js",
+    "test": "npm run lint",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint src/**/*.js",
     "lint:css": "stylelint src/**/*.scss",
