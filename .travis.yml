@@ -1,6 +1,13 @@
+os: linux
+group: stable
+dist: trusty
+
 language: node_js
 
-before_script: npm rebuild node-sass;
+node_js:
+  - 8.9.1
+
+fast_finish: true
 
 install:
   - npm install
