@@ -29,9 +29,9 @@ module.exports = {
               name: '[name].[ext]',
             },
           },
-          {
-            loader: 'image-webpack-loader',
-          },
+          // {
+          //   loader: 'image-webpack-loader',
+          // },
         ],
       },
       {
