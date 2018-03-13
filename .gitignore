@@ -1,5 +1,4 @@
 .idea/
 debug.log
 node_modules/
-staging/
 dist/
